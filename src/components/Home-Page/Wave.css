@@ -1,0 +1,69 @@
+.home-waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.home-waves svg {
+    position: relative;
+    display: block;
+    width: calc(193% + 1.3px);
+    height: 265px;
+    transform: rotateY(180deg);
+}
+
+.home-waves .shape-fill {
+    fill: rgb(164 202 254);
+}
+
+.about-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.about-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 166px;
+}
+
+.about-wave .shape-fill {
+    fill: rgb(248 180 180);
+}
+
+.services-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.services-wave svg {
+    position: relative;
+    display: block;
+    width: calc(142% + 1.3px);
+    height: 172px;
+}
+
+.services-wave .shape-fill {
+    fill: rgb(126 220 226);
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .about-wave svg {
+        width: calc(205% + 1.3px);
+        height: 55px;
+    }
+}
