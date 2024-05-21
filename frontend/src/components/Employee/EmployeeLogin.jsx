@@ -27,8 +27,8 @@ function EmployeeLogin() {
             title: "Check your details",
             text: "Invalid Credentials..."
         })
-        setEmail('')
-        setPhone('')
+        setID('')
+        setEmail('')     
     }
 }
 
@@ -51,20 +51,15 @@ function EmployeeLogin() {
                   Password
                 </label>
             </div>
-            <div className="hover:underline">
-              <Link to={'/employee/forgotpassword'}>
-                <strong>Forgot Password?</strong>
-              </Link>    
-            </div>
             <div className='grid place-items-center'>
                 <button type="submit" onClick={handleLogin} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Submit
                 </button> 
                 <div className='mt-3'>
                     <p>
-                        Don't have an Account?
-                        <Link to={'/employee/signup'} >
-                          <strong>Register</strong>
+                        Forgot your password?
+                        <Link to={'/employee/forgotpassword'} >
+                          <strong className='hover:underline'>Reset here</strong>
                         </Link>
                     </p>
                 </div>

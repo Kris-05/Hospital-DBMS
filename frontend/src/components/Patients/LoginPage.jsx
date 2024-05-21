@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2'
 
-function Patient() {
+function LoginPage({user,setUser}) {
   const navigate = useNavigate();
     
   const [email,setEmail] = useState('')
@@ -12,8 +12,8 @@ function Patient() {
   //const handleLogin = async(e) 
   const handleLogin = async(e) => {
     try {
+        console.log(user)
         e.preventDefault()
-        console.log('Signup Sucessful')
         navigate('/dashboard')
         Swal.fire({
             icon: "success",
@@ -74,4 +74,4 @@ function Patient() {
   </>
 }
 
-export default Patient
+export default LoginPage

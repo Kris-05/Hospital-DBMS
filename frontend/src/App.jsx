@@ -14,11 +14,13 @@ import AdminForgotPassword from './components/Admin/AdminForgotPassword'
 import AdminDashboard from './components/Admin/AdminDashboard'
 
 import EmployeeLogin from './components/Employee/EmployeeLogin'
-import EmployeeSignUp from './components/Employee/EmployeeSignUp'
 import EmployeeForgotPassword from './components/Employee/EmployeeForgotPassword'
 import EmployeeDashboard from './components/Employee/EmployeeDashboard'
 
 function App() {
+
+  const [user,setUser] = useState([])
+
   return (
     <>
     <BrowserRouter>
@@ -26,10 +28,10 @@ function App() {
 
         {/* Patient */}
         <Route path="/home" element={<Page />}/>
-        <Route path="/login" element={<LoginPage />}/>
-        <Route path="/signup" element={<SignupPage />}/>
-        <Route path="/forgotpassword" element={<ForgotPassword />}/>
-        <Route path="/dashboard" element={<Dashboard />}/> 
+        <Route path="/login" element={<LoginPage user={user} setUser={setUser} />}/>
+        <Route path="/signup" element={<SignupPage user={user} setUser={setUser} />}/>
+        <Route path="/forgotpassword" element={<ForgotPassword user={user} setUser={setUser} />}/>
+        <Route path="/dashboard" element={<Dashboard user={user} setUser={setUser} />}/> 
 
         {/* Connect */}
         <Route path="/employee" element={<Connect/>}/>
@@ -37,7 +39,6 @@ function App() {
 
         {/* Employee */} 
         <Route path='/employee/login' element={<EmployeeLogin/>}/>
-        <Route path='/employee/signup' element={<EmployeeSignUp/>}/>
         <Route path='/employee/forgotpassword' element={<EmployeeForgotPassword/>}/>
         <Route path='/employee/dashboard' element={<EmployeeDashboard/>}/>
         
